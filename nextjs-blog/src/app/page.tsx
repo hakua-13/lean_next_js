@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -40,22 +41,15 @@ export default function Home() {
       </div>
 
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
+        <Link href="/posts/first-post" className="group border border-transparent rounded-lg pt-3 hover:bg-gray-100 hover:border-gray-300">
+          <h2 className="mb-3 text-2xl font-semibold">
+            First-Post{" "}
+            <span className="inline-block group-hover:translate-x-1 duration-100">
+            -&gt;
             </span>
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+          <p className="mx-auto mb-3 w-60 text-sm text-gray-500">Learn about Next.js in an interactive course with quizzes!</p>
+        </Link>
 
         <a
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
